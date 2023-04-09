@@ -14,6 +14,8 @@ namespace player
         private float timer = 0f;
         public float badHP;
         public float maxBadHP = 3;
+        public Animator animator;
+
         public bool lookingAtEnemy = false;
        
 
@@ -22,7 +24,8 @@ namespace player
         {
             attackArea = transform.GetChild(0).gameObject;
             badHP = maxBadHP;
-            
+            animator = gameObject.GetComponent<Animator>();
+
         }
 
         // Update is called once per frame
@@ -70,6 +73,7 @@ namespace player
             attacking = true;
             attackArea.SetActive(attacking);
             badHP--;
+            animator.SetBool("IsAttacking", true);
             Debug.Log("Hit" + badHP);
             
         }

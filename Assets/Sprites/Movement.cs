@@ -112,13 +112,13 @@ public class Movement : MonoBehaviour
         if (isDashing)
         {
             rb.velocity = dashingDir.normalized * dashingVelocity;
-            //animator.SetBool("IsDashing", true);
+            animator.SetBool("IsDashing", true);
             tR.emitting = true;
         }
 
         if (!isDashing)
         {
-            //animator.SetBool("IsDashing", false);
+            animator.SetBool("IsDashing", false);
             tR.emitting = false;
         }
 
