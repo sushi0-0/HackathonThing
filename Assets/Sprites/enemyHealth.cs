@@ -16,7 +16,7 @@ namespace enemy
         public GameObject enemy;
 
         // Start is called before the first frame update
-        void Start()
+       /* void Start()
         {
             badHP = maxBadHP;
             
@@ -30,7 +30,7 @@ namespace enemy
             {
                 Destroy(enemy);
             }
-        }
+        }*/
 
         void OnTriggerEnter2D(Collider2D other)
         {
