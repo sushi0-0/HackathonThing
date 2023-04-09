@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,5 +19,10 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(int health)
     {
         slider.value = health;
+    }
+
+    internal void Damage(int damage)
+    {
+        throw new NotImplementedException();
     }
 }
