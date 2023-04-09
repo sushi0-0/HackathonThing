@@ -227,29 +227,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &506940048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6636917810515906451, guid: 7787a47564c0da347bf83f764c23f112, type: 3}
-  m_PrefabInstance: {fileID: 1853773922}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &506940055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506940048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3b0e72ad67d73046bce5e0e2c9e0938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  badHP: 3
-  maxBadHP: 3
-  finalbadHP: 3
-  PA: {fileID: 1746149035}
-  inRange: 0
-  enemy: {fileID: 1059658964}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,11 +379,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1059658964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6636917811570534463, guid: 7787a47564c0da347bf83f764c23f112, type: 3}
-  m_PrefabInstance: {fileID: 1853773922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1135023064
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,9 +863,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacking: 0
-  eHbadHP: 0
-  EH: {fileID: 0}
-  enemy: {fileID: 1059658964}
+  enemy: {fileID: 6636917811570534463, guid: 7787a47564c0da347bf83f764c23f112, type: 3}
+  badHP: 3
+  maxBadHP: 3
 --- !u!1 &1758351178
 GameObject:
   m_ObjectHideFlags: 0
