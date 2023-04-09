@@ -1,45 +1,54 @@
+using enemy;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+namespace player
 {
-    private GameObject attackArea = default;
-
-    private bool attacking = false;
-
-    private float timeToAttack = 0.25f;
-    private float timer = 0f;
-
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerAttack : MonoBehaviour
     {
-        attackArea = transform.GetChild(0).gameObject;
-    }
+        private GameObject attackArea = default;
+        public bool attacking = false;
+        public GameObject enemy;
+        private float timeToAttack = 0.25f;
+        private float timer = 0f;
+        
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Z))
+        // Start is called before the first frame update
+        void Start()
         {
-            Attack();
+            attackArea = transform.GetChild(0).gameObject;
+      
+            
         }
 
-        if(attacking)
+        // Update is called once per frame
+        void Update()
         {
-            timer += Time.deltaTime;
-
-            if(timer>=timeToAttack)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                timer = 0;
-                attacking = false;
-                attackArea.SetActive(attacking);
+                Attack();
+            }
+
+            if (attacking)
+            {
+                timer += Time.deltaTime;
+
+                if (timer >= timeToAttack)
+                {
+                    timer = 0;
+                    attacking = false;
+                    attackArea.SetActive(attacking);
+                }
             }
         }
-    }
-    private void Attack()
-    {
-        attacking = true;
-        attackArea.SetActive(attacking);
+        private void Attack()
+        {
+            attacking = true;
+            attackArea.SetActive(attacking);
+            Debug.Log("Hit");
+            Destroy(enemy);
+            
+        }
     }
 }
